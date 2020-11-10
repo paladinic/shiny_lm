@@ -12,7 +12,10 @@ ui <- fluidPage(
     sidebarPanel(
       selectInput(inputId = "dv",label = "Dependent Variable",choices = colnames(mtcars)),
       selectInput(inputId = "iv",label = "Independent Variable",multiple = T,choices = colnames(mtcars)),
-      actionButton(inputId = "run",label = "Run")
+      hr(),
+      actionButton(inputId = "run",label = "Run"),
+      hr(),
+      tags$a(href = "https://github.com/paladinic/shiny_lm","Code")
     ),
     mainPanel(
       textOutput(outputId = "r2"),
