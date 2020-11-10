@@ -1,10 +1,12 @@
 library(shiny)
+library(shinythemes)
 library(plotly)
 library(tibble)
 library(dplyr)
 
 ui <- fluidPage(
   title = "Linear Regression",
+  theme = shinytheme("darkly"),
   h1("Linear Regression"),              
   sidebarLayout(
     sidebarPanel(
